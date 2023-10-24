@@ -1,0 +1,238 @@
+/* Variables for all
+  ================================== */
+
+  :root {
+    --hover-active-links-color: #FF6565;
+    --hover-active-button-opacity: 0.9;
+    --color-white: #ffffff;
+    --color-black: #071629;
+    --color-grey: #979797;
+    --content-max-width: 1000px;
+    --navbar-item-padding: 15px;
+  }
+
+/* Base styles
+  ================================== */
+
+html {
+  height: 100%;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+  cursor: pointer;
+  user-select: none;
+}
+
+a:active {
+  color: var(--hover-active-links-color);
+}
+
+a:hover {
+  color: var(--hover-active-links-color);
+}
+
+body header {
+  display: absolute;
+  width: 100%;
+  margin-bottom: -110px;
+  z-index: 2;
+  background-color: transparent;
+}
+
+body header div {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#headline {
+  width: 230px;
+  height: 40px;
+  background-image: url("images/logo_headphones.png");
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.navbar {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+#check-screen-size:checked ~ .navbar {
+  margin-bottom: 1px;
+}
+/*------- Drop Down Menu -------*/
+#check-screen-size {
+  width: 30px;
+  transition: all .2s ease-in-out;
+}
+#check-screen-size:checked {
+  width: 4px;
+}
+#screen-size-label {
+  order: -1;
+  top: 0%;
+  left: 0%;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  padding: 2.5rem;
+}
+#drop-down-menu, #drop-down-menu::before, #drop-down-menu::after {
+  position: relative;
+  display: block;
+  background: var(--color-white);
+  height: .15rem;
+  width: 1.2rem;
+  transition: all .2s ease-in-out;
+}
+#drop-down-menu::before {
+  position: absolute;
+  content: "";
+  width: 1.7rem;
+  top: -0.5rem;
+}
+#drop-down-menu::after {
+  position: absolute;
+  content: "";
+  width: 1.7rem;
+  top: 0.5rem;
+}
+
+
+#check-screen-size:checked ~ * #drop-down-menu::before {
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+#check-screen-size:checked ~ * #drop-down-menu {
+  background-color: transparent;
+  width: 0rem;
+}
+#check-screen-size:checked ~ * #drop-down-menu::after {
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+/*---- Navbar menu ----*/
+.navbar {
+  color: var(--color-white);
+}
+.navbar ul {
+  margin-top: -10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar li {
+  padding: var(--navbar-item-padding);
+  display: none;
+  font-size: 12px;
+}
+
+#check-screen-size:checked ~ .navbar li {
+  display: block;
+}
+
+/*---- Hero Section ----*/
+.hero-section {
+  background-image: url('images/headphones_hero_1.jpg');
+  background-position: center top;
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.hero-section h1 {
+  color: var(--color-white);
+  margin-top: 420px;
+  font-size: 28px;
+  text-align: center;
+}
+.hero-section strong {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 12px;
+  margin: 10px;
+}
+.hero-section a {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  margin: 80px;
+  background-color: var(--hover-active-links-color);
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+}
+.hero-section a:hover, .hero-section a:active {
+  opacity: var(--hover-active-button-opacity);
+}
+.hero-section p {
+  color: var(--color-white);
+  padding: 30px;
+  max-width: 800px;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  #screen-size-label {
+      display: none;
+  }
+  .navbar {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .navbar a {
+      margin-left: auto;
+      margin-right: auto;
+      justify-self: flex-start;
+  }
+  .navbar ul {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row;
+      justify-self: flex-end;
+  }
+  .navbar li {
+      margin-top: 100px;
+      display: block;
+      padding: 2px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
