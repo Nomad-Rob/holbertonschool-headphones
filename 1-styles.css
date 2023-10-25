@@ -237,3 +237,66 @@ main {
   }
 }
 
+
+/**---- What We Do Section ----**/
+
+.what {
+    color: var(--color-black);
+    padding-top: 200px;
+    max-width: 637px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .what .what-section h1 {
+    font-family: var(--font-family);
+    font-size: 32px;
+    line-height: 37.5px;
+    text-align: center;
+  }
+  
+  .what .what-section p {
+    font-size: 1rem;
+    line-height: 28px;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+    max-width: 637px;
+    text-align: center;
+  }
+  
+  .what_we_do_icons {
+    color: var(--color-black);
+    height: auto;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    padding: 70px;
+    margin-bottom: 110px;
+    max-width: 1000px;
+  }
+  
+  .what_we_do_icons h3 {
+    font-size: 18px;
+    color: var(--color-black);
+  }
+  
+  .what_we_do_icons p {
+    line-height: 25px;
+    font-size: 14px;
+    color: var(--color-black);
+    max-width: 207px;
+    position: relative;
+  }
+  
+  .what_we_do_icon {
+    color: var(--hover-active-links-color);
+    font-size: 5rem;
+  }
+  
+  .holberton_school_icon :increment {
+    color: var(--hover-active-links-color);
+    font-size: 5rem;
+  }
+  
+  

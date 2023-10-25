@@ -13,3 +13,10 @@ https://raw.githubusercontent.com/Nomad-Rob/holbertonschool-headphones/main/60df
 Requirements
 you are not allowed to import external CSS framework (like Bootstrap)
 you are not to use Javascript
+
+
+## Issues:
+
+Font family is still messed up
+Some containers are not centered
+Footer still needs work on placement
