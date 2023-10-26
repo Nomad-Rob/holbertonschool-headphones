@@ -447,6 +447,13 @@ main {
     background-size: 90% auto;
     margin-left: 10px;
   }
+  .footstuff {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
   
   footer #copyright {
     margin: 15px;
@@ -455,6 +462,7 @@ main {
   
   footer .social {
     background-image: url('./images/social_icons.png');
+    background-repeat: no-repeat;
     margin-top: -15px;
     width: 200px;
     display: flex;
