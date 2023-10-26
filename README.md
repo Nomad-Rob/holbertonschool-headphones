@@ -8,7 +8,7 @@ Here the final result:
 
 This webpage has been designed by Nicolas Philippot, UI/UX designer. You can find final screens here
 
-<img src='https://raw.githubusercontent.com/Nomad-Rob/holbertonschool-headphones/main/60df485eb772ecbad54a.jpg)'>
+![Picture](https://raw.githubusercontent.com/Nomad-Rob/holbertonschool-headphones/main/images/Template.jpg)
 Requirements
 you are not allowed to import external CSS framework (like Bootstrap)
 you are not to use Javascript
